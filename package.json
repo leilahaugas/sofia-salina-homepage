@@ -1,0 +1,8 @@
+{
+  "name": "sofia-salina-homepage",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx serve . --listen 3000 --open",
+    "start": "npx serve . --listen 3000"
+  }
+}
