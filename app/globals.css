@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito Sans', sans-serif; overflow-x: hidden; }
+  h1, h2, h3, h4 { font-family: 'Nunito', sans-serif; font-weight: 800; line-height: 1.15; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 font-nunito font-extrabold text-base px-8 py-3.5 rounded-btn
+           bg-blue-deep text-white shadow-[0_4px_20px_rgba(27,58,158,0.3)]
+           hover:bg-blue-mid hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(27,58,158,0.4)]
+           transition-all duration-200;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 font-nunito font-extrabold text-base px-8 py-3.5 rounded-btn
+           bg-transparent text-blue-deep border-2 border-blue-deep
+           hover:bg-blue-deep hover:text-white hover:-translate-y-0.5
+           transition-all duration-200;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 font-nunito font-extrabold text-base px-8 py-3.5 rounded-btn
+           bg-blue-deep/10 text-blue-light cursor-default pointer-events-none;
+  }
+  .tag {
+    @apply inline-block font-nunito text-xs font-bold tracking-widest uppercase
+           text-blue-mid bg-blue-deep/10 px-4 py-1.5 rounded-full mb-4;
+  }
+  .section-heading {
+    @apply text-blue-deep;
+  }
+  .card {
+    @apply bg-white rounded-card shadow-card hover:-translate-y-1.5 hover:shadow-hover transition-all duration-300;
+  }
+  .fade-in {
+    @apply opacity-0 translate-y-7 transition-all duration-700;
+  }
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Floating animation for doodles */
+@keyframes floatLoop {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+.float { animation: floatLoop 4s ease-in-out infinite; }
+.float-delay-1 { animation-delay: 0.5s; }
+.float-delay-2 { animation-delay: 1s; }
+.float-delay-3 { animation-delay: 1.5s; }
+
+/* Prose styles for blog/chapter content */
+.prose-sofia {
+  @apply text-dark/80 leading-relaxed;
+}
+.prose-sofia h2 { @apply font-nunito font-extrabold text-2xl text-blue-deep mt-10 mb-4; }
+.prose-sofia h3 { @apply font-nunito font-bold text-xl text-blue-deep mt-8 mb-3; }
+.prose-sofia p  { @apply mb-5 text-base leading-7; }
+.prose-sofia ul { @apply list-disc pl-6 mb-5 space-y-2; }
+.prose-sofia ol { @apply list-decimal pl-6 mb-5 space-y-2; }
+.prose-sofia blockquote {
+  @apply border-l-4 border-blue-deep bg-sky-light rounded-r-card pl-6 pr-4 py-4 my-6
+         font-nunito font-bold text-blue-deep italic;
+}
+.prose-sofia strong { @apply font-bold text-dark; }
