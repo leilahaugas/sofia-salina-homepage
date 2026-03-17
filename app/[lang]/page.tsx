@@ -48,8 +48,8 @@ export default async function HomePage({ params }: Props) {
           <div className="flex justify-center">
             <div className="relative">
               <div className="relative group">
-                <Image src="/images/noorte_tervislikud_eluviisid_raamat.png" alt="Raamatu kaas" width={280} height={420}
-                  className="rounded-lg shadow-book group-hover:-translate-y-2 group-hover:rotate-1 transition-transform duration-500" />
+                <Image src="/images/noorte_tervislikud_eluviisid_raamat.png" alt="Raamatu kaas" width={340} height={510}
+                  className="group-hover:-translate-y-2 group-hover:rotate-1 transition-transform duration-500" />
                 <Image src="/images/doodles/star.svg"  alt="" width={36} height={36} className="absolute -top-7 -right-3 float float-delay-1" />
                 <Image src="/images/doodles/heart.svg" alt="" width={32} height={32} className="absolute bottom-8 -left-7 float float-delay-2" />
                 <Image src="/images/doodles/moon.svg"  alt="" width={34} height={34} className="absolute top-1/2 -right-10 float float-delay-3" />
