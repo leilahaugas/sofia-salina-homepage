@@ -10,7 +10,10 @@ interface PreOrderStrings {
   fields:  { name: string; email: string; phone: string; org: string; copies: string }
   submit:  string
   submitting: string
-  success: string
+  success: {
+    title: string; line1: string; line2: string; line3: string
+    contact: string; email: string; btnBook: string; btnHome: string
+  }
   error:   string
 }
 
@@ -30,9 +33,22 @@ export default function PreOrderForm({ d }: { d: PreOrderStrings }) {
 
   if (state.status === 'success') {
     return (
-      <div className="text-center py-16 px-8 bg-gradient-to-br from-sky-light to-sky-mid rounded-card">
+      <div className="text-center py-12 px-8 bg-gradient-to-br from-sky-light to-sky-mid rounded-card">
         <div className="text-5xl mb-4">🎉</div>
-        <p className="font-nunito font-black text-blue-deep text-xl">{d.success}</p>
+        <h3 className="font-nunito font-black text-blue-deep text-2xl mb-4">{d.success.title}</h3>
+        <p className="text-dark/70 mb-1">{d.success.line1}</p>
+        <p className="text-dark/70 mb-1">{d.success.line2}</p>
+        <p className="text-dark/70 mb-5">{d.success.line3}</p>
+        <p className="text-dark/60 text-sm mb-6">
+          {d.success.contact}{' '}
+          <a href={`mailto:${d.success.email}`} className="text-blue-deep font-bold hover:underline">
+            {d.success.email}
+          </a>
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="#sisust" className="btn-primary">{d.success.btnBook}</a>
+          <a href="/" className="btn-ghost">{d.success.btnHome}</a>
+        </div>
       </div>
     )
   }
