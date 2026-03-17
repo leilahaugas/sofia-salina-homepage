@@ -26,10 +26,10 @@ export const dict = {
 
     // Hero
     hero: {
-      tag:      'Uus raamat · 2025',
-      title:    'Noorte Tervislikud Eluviisid',
+      tag:      'Raamat noorelt noorele',
+      title:    'Noorte tervislikud eluviisid – praktiline teejuht teismelistele',
       subtitle: 'Väikesed sammud. Suur muutus. Meie moodi.',
-      desc:     'Aus ja praktiline teejuht noorelt noorele — liikumisest, unest, toitumisest, vaimsest tervisest ja enesetundmisest. Kirjutatud 15-aastase tüdruku poolt, kes teab, milline see elu tegelikult välja näeb.',
+      desc:     'Aus ja praktiline teejuht noorte tervislike eluviiside kohta.\nRaamat räägib liikumisest, unest, toitumisest ja vaimsest tervisest\nteismelise pilgu läbi.',
       cta:      'Eeltelli raamat',
       more:     'Loe rohkem',
     },
@@ -46,19 +46,21 @@ export const dict = {
 
     // Themes
     themes: {
-      tag:     'Teemad',
-      movement:{ label: 'Liikumine', desc: 'Liikumine ei pea olema raske. Leiame koos viisid, mis päriselt sobivad sinu ellu.' },
-      sleep:   { label: 'Uni',       desc: 'Miks uni on salajane supervõim? Ja kuidas telefon meie und mõjutab — ausalt.' },
-      food:    { label: 'Toitumine', desc: 'Räägime päris toitumisest, mitte dieetidest. Friikartulid on ka okei.' },
-      mental:  { label: 'Vaimne tervis', desc: 'Stress, surve, sotsiaalmeedias võrdlemine. Kuidas hoida oma pead selge.' },
-      emotions:{ label: 'Emotsioonid', desc: 'Emotsioonide mõistmine ja nendega toimetulek — noorte keeles.' },
-      self:    { label: 'Enesetundmine', desc: 'Praktilised harjutused enda paremaks tundmaõppimiseks ja väärtuste leidmiseks.' },
+      tag:      'Teemad',
+      food:     { label: 'Toitumine',                    desc: 'Räägime päris toitumisest, mitte dieetidest. Friikartulid on ka okei.' },
+      social:   { label: 'Sotsiaalne tervis',            desc: 'Stress, surve, sotsiaalmeedias võrdlemine. Kuidas hoida oma pead selge.' },
+      sleep:    { label: 'Puhkus ja uni',                desc: 'Miks uni on salajane supervõim? Ja kuidas telefon meie und mõjutab — ausalt.' },
+      sport:    { label: 'Sport ja liikumine',           desc: 'Liikumine ei pea olema raske. Leiame koos viisid, mis päriselt sobivad sinu ellu.' },
+      nicotine: { label: 'Nikotiin ja uimastid',         desc: 'Aus jutt nikotiinist ja uimastitest — faktid ilma loenguta.' },
+      eating:   { label: 'Toitumisega seotud häired',   desc: 'Avame teema, millest ei räägita piisavalt — hoolivalt ja ausalt.' },
+      alcohol:  { label: 'Alkohol ja suhkrurikkad joogid', desc: 'Mida need joogid tegelikult kehaga teevad — noorte keeles.' },
+      mood:     { label: 'Enesetunne ja meeleolu',        desc: 'Kuidas mõista oma tundeid ja hoida head meeleolu — igapäevaselt.' },
     },
 
     // Inside
     inside: {
-      tag:   'Mis raamatus on',
-      title: 'Kuus teemat, üks eesmärk',
+      tag:   'Mida leiad raamatust?',
+      title: 'Kaheksa teemat, üks eesmärk',
       desc:  'Iga peatükk on aus ja praktiline — mitte loeng, vaid vestlus.',
     },
 
@@ -134,6 +136,37 @@ export const dict = {
       subjects:    ['Küsimus raamatu kohta', 'Koostöö', 'Meediapäring', 'Muu'],
     },
 
+    // FAQ
+    faq: {
+      tag:         'KKK',
+      title:       'Mida noored oma tervise kohta kõige rohkem küsivad?',
+      intro:       'Noored otsivad iga päev vastuseid küsimustele liikumise, une, toitumise ja ekraaniaja kohta. Siin on mõned kõige sagedasemad küsimused ja lihtsad vastused, mis aitavad paremini mõista, kuidas igapäevased harjumused mõjutavad enesetunnet ja energiat.',
+      sourceLabel: 'Allikas',
+      closing:     'Nendest ja paljudest teistest teemadest räägib ka raamat „Noorte tervislikud eluviisid". Raamat selgitab lihtsas ja arusaadavas keeles, kuidas väikeste igapäevaste sammudega oma enesetunnet ja harjumusi tasakaalu viia.',
+      items: [
+        {
+          q:      'Kui palju peaks teismeline päevas liikuma?',
+          a:      'Terviseorganisatsioonid soovitavad noortel liikuda vähemalt 60 minutit päevas. See ei pea tähendama ainult trenni – ka jalutamine, rattasõit, tantsimine või aktiivne mängimine loevad. Regulaarne liikumine aitab parandada füüsilist vormi, toetab vaimset heaolu ja aitab paremini keskenduda.',
+          source: 'https://www.who.int/news-room/fact-sheets/detail/physical-activity',
+        },
+        {
+          q:      'Miks uni on teismelistele nii oluline?',
+          a:      'Teismelised vajavad tavaliselt 8–10 tundi und ööpäevas. Une ajal taastub aju, kinnistuvad õpitud teadmised ja reguleeritakse hormoone, mis mõjutavad energiat ja meeleolu. Kui uni jääb lühikeseks, kannatavad sageli nii keskendumine, õppimine kui ka üldine enesetunne.',
+          source: 'https://www.sleepfoundation.org/teens-and-sleep',
+        },
+        {
+          q:      'Kui palju ekraaniaega on tervislik?',
+          a:      'Paljud eksperdid soovitavad hoida meelelahutusliku ekraaniaja alla 2 tunni päevas. Pikem ekraaniaeg võib mõjutada und, vähendada liikumist ja suurendada väsimust. Tasakaal tekib siis, kui ekraanide kõrval jääb aega ka liikumiseks, hobideks ja päris suhtlemiseks.',
+          source: 'https://www.aap.org/en/patient-care/media-and-children',
+        },
+        {
+          q:      'Milline toitumine annab noortele rohkem energiat?',
+          a:      'Energia püsib stabiilsem, kui süüa regulaarselt ja mitmekesiselt. Toidukorrad, mis sisaldavad täisteratooteid, puuvilju, köögivilju, valku ja tervislikke rasvu, aitavad hoida energiataset ühtlasena. Väga suhkrurikkad snäkid annavad küll kiire energiatõusu, kuid sellele järgneb sageli kiire väsimus.',
+          source: 'https://www.hsph.harvard.edu/nutritionsource',
+        },
+      ],
+    },
+
     // Footer
     footer: {
       tagline: 'Väikesed sammud. Suur muutus. Meie moodi.',
@@ -165,7 +198,7 @@ export const dict = {
 
     hero: {
       tag:      'New book · 2025',
-      title:    'Healthy Lifestyles for Youth',
+      title:    'Healthy lifestyles for youth – a practical guide for teenagers',
       subtitle: 'Small steps. Big change. Our way.',
       desc:     'An honest, practical guide from a young person to young people — about movement, sleep, nutrition, mental health, and self-awareness. Written by a 15-year-old who knows what this life actually looks like.',
       cta:      'Pre-order the book',
@@ -182,18 +215,20 @@ export const dict = {
     },
 
     themes: {
-      tag:     'Themes',
-      movement:{ label: 'Movement',      desc: 'Movement doesn\'t have to be hard. Together we find ways that actually fit into your life.' },
-      sleep:   { label: 'Sleep',         desc: 'Why is sleep your secret superpower? And how does your phone really affect your sleep — honestly.' },
-      food:    { label: 'Nutrition',     desc: 'We talk about real eating, not diets. French fries are okay too.' },
-      mental:  { label: 'Mental health', desc: 'Stress, pressure, social media comparison. How to keep your head clear.' },
-      emotions:{ label: 'Emotions',      desc: 'Understanding your emotions and coping with them — in a language teenagers actually speak.' },
-      self:    { label: 'Self-awareness',desc: 'Practical exercises for getting to know yourself better and discovering your values.' },
+      tag:      'Themes',
+      food:     { label: 'Nutrition',                  desc: 'We talk about real eating, not diets. French fries are okay too.' },
+      social:   { label: 'Social health',              desc: 'Stress, pressure, social media comparison. How to keep your head clear.' },
+      sleep:    { label: 'Rest & sleep',               desc: 'Why is sleep your secret superpower? And how does your phone really affect your sleep — honestly.' },
+      sport:    { label: 'Sport & movement',           desc: 'Movement doesn\'t have to be hard. Together we find ways that actually fit into your life.' },
+      nicotine: { label: 'Nicotine & drugs',           desc: 'Honest facts about nicotine and drugs — without lectures.' },
+      eating:   { label: 'Eating disorders',           desc: 'Opening a topic that doesn\'t get talked about enough — with care and honesty.' },
+      alcohol:  { label: 'Alcohol & sugary drinks',   desc: 'What these drinks actually do to your body — in a language teens understand.' },
+      mood:     { label: 'Wellbeing & mood',          desc: 'How to understand your feelings and maintain a good mood — every day.' },
     },
 
     inside: {
       tag:   'What\'s inside',
-      title: 'Six topics, one goal',
+      title: 'Eight topics, one goal',
       desc:  'Every chapter is honest and practical — not a lecture, but a conversation.',
     },
 
@@ -261,6 +296,37 @@ export const dict = {
       errorTitle:  'Something went wrong.',
       errorDesc:   'Please try again or write directly to: sofia@sofiasalina.com',
       subjects:    ['Question about the book', 'Collaboration', 'Media enquiry', 'Other'],
+    },
+
+    // FAQ
+    faq: {
+      tag:         'FAQ',
+      title:       'What do young people ask most about their health?',
+      intro:       'Every day, young people search for answers about movement, sleep, nutrition, and screen time. Here are some of the most common questions and straightforward answers to help better understand how everyday habits affect wellbeing and energy.',
+      sourceLabel: 'Source',
+      closing:     'These topics and many more are covered in the book "Healthy Lifestyles for Youth". It explains in simple, accessible language how small everyday steps can bring your wellbeing and habits into balance.',
+      items: [
+        {
+          q:      'How much should a teenager move each day?',
+          a:      'Health organisations recommend that young people get at least 60 minutes of physical activity per day. This doesn\'t have to mean only gym workouts — walking, cycling, dancing, or active play all count. Regular movement helps improve physical fitness, supports mental wellbeing, and aids concentration.',
+          source: 'https://www.who.int/news-room/fact-sheets/detail/physical-activity',
+        },
+        {
+          q:      'Why is sleep so important for teenagers?',
+          a:      'Teenagers typically need 8–10 hours of sleep per night. During sleep the brain recovers, knowledge learned during the day is consolidated, and hormones that affect energy and mood are regulated. When sleep is cut short, concentration, learning, and overall wellbeing often suffer.',
+          source: 'https://www.sleepfoundation.org/teens-and-sleep',
+        },
+        {
+          q:      'How much screen time is healthy?',
+          a:      'Many experts recommend keeping recreational screen time under 2 hours per day. Longer screen time can affect sleep, reduce physical activity, and increase fatigue. Balance comes when there is also time for movement, hobbies, and real-life socialising alongside screens.',
+          source: 'https://www.aap.org/en/patient-care/media-and-children',
+        },
+        {
+          q:      'What kind of eating gives young people more energy?',
+          a:      'Energy stays more stable when you eat regularly and varied meals. Meals that include wholegrains, fruit, vegetables, protein, and healthy fats help keep energy levels steady. Very sugary snacks give a quick energy boost, but a rapid drop in energy often follows.',
+          source: 'https://www.hsph.harvard.edu/nutritionsource',
+        },
+      ],
     },
 
     footer: {

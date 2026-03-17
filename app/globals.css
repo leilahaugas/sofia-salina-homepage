@@ -13,7 +13,7 @@
   .btn-primary {
     @apply inline-flex items-center gap-2 font-nunito font-extrabold text-base px-8 py-3.5 rounded-btn
            bg-blue-deep text-white shadow-[0_4px_20px_rgba(27,58,158,0.3)]
-           hover:bg-blue-mid hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(27,58,158,0.4)]
+           hover:bg-red-600 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(220,38,38,0.4)]
            transition-all duration-200;
   }
   .btn-secondary {
@@ -27,8 +27,8 @@
            bg-blue-deep/10 text-blue-light cursor-default pointer-events-none;
   }
   .tag {
-    @apply inline-block font-nunito text-xs font-bold tracking-widest uppercase
-           text-blue-mid bg-blue-deep/10 px-4 py-1.5 rounded-full mb-4;
+    @apply inline-block font-nunito text-base font-bold tracking-widest uppercase
+           text-red-600 bg-red-50 px-7 py-3 rounded-full mb-4;
   }
   .section-heading {
     @apply text-blue-deep;
