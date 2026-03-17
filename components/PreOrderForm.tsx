@@ -47,7 +47,7 @@ export default function PreOrderForm({ d }: { d: PreOrderStrings }) {
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <a href="#sisust" className="btn-primary">{d.success.btnBook}</a>
-          <a href="/" className="btn-ghost">{d.success.btnHome}</a>
+          <a href="/" className="inline-flex items-center gap-2 font-nunito font-extrabold text-base px-8 py-3.5 rounded-btn bg-blue-deep/10 text-blue-light hover:bg-blue-deep/20 transition-colors">{d.success.btnHome}</a>
         </div>
       </div>
     )
