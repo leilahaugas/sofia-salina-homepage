@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { dict, isValidLang } from '@/lib/i18n'
+import PreOrderForm from '@/components/PreOrderForm'
 
 interface Props { params: Promise<{ lang: string }> }
 
@@ -222,17 +223,14 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* ── GET BOOK ── */}
-      <section id="hangi" className="py-24 px-6 bg-white text-center">
-        <div className="max-w-lg mx-auto">
-          <span className="tag">{d.getBook.tag}</span>
-          <h2 className="font-nunito font-black text-blue-deep text-3xl md:text-4xl mb-4">{d.getBook.title}</h2>
-          <p className="text-dark/60 text-lg mb-8">{d.getBook.desc}</p>
-          <span className="btn-ghost">{d.getBook.cta}</span>
-          <div className="mt-5">
-            <span className="inline-block bg-gradient-to-r from-sky-light to-sky-mid text-blue-mid font-nunito font-bold text-sm px-5 py-2 rounded-full">
-              {d.getBook.soon}
-            </span>
+      <section id="hangi" className="py-24 px-6 bg-white">
+        <div className="max-w-xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="tag">{d.getBook.tag}</span>
+            <h2 className="font-nunito font-black text-blue-deep text-3xl md:text-4xl mt-4 mb-4">{d.getBook.title}</h2>
+            <p className="text-dark/60 text-lg">{d.getBook.desc}</p>
           </div>
+          <PreOrderForm d={d.getBook} />
         </div>
       </section>
     </>

@@ -91,11 +91,20 @@ export const dict = {
 
     // Get book
     getBook: {
-      tag:    'Hangi raamat',
-      title:  'Valmis alustama?',
-      desc:   '"Noorte Tervislikud Eluviisid" on peagi saadaval. Jää silme peal — eeltellimise link lisatakse siia niipea kui võimalik!',
-      cta:    'Eeltellimise link tuleb peagi ✨',
-      soon:   'Peagi saadaval · Coming soon',
+      tag:        'Eeltelli raamat',
+      title:      'Eeltelli raamat',
+      desc:       'Täida vorm ja me võtame sinuga ühendust, kui raamat on saadaval.',
+      fields: {
+        name:     'Nimi',
+        email:    'E-posti aadress',
+        phone:    'Telefon (valikuline)',
+        org:      'Asutus / organisatsioon (valikuline)',
+        copies:   'Tellimuste arv',
+      },
+      submit:     'Saada eeltellimus',
+      submitting: 'Saadan...',
+      success:    'Suur tänu! Võtame sinuga ühendust, kui raamat on saadaval.',
+      error:      'Midagi läks valesti. Palun proovi uuesti.',
     },
 
     // Blog
@@ -256,11 +265,20 @@ export const dict = {
     },
 
     getBook: {
-      tag:   'Get the book',
-      title: 'Ready to start?',
-      desc:  '"Healthy Lifestyles for Youth" is coming soon. Stay tuned — the pre-order link will appear here as soon as it\'s available!',
-      cta:   'Pre-order link coming soon ✨',
-      soon:  'Peagi saadaval · Coming soon',
+      tag:        'Pre-order the book',
+      title:      'Pre-order the book',
+      desc:       'Fill in the form and we will be in touch when the book is available.',
+      fields: {
+        name:     'Full name',
+        email:    'Email address',
+        phone:    'Phone (optional)',
+        org:      'Organisation (optional)',
+        copies:   'Number of copies',
+      },
+      submit:     'Send pre-order',
+      submitting: 'Sending...',
+      success:    'Thank you! We will be in touch when the book is available.',
+      error:      'Something went wrong. Please try again.',
     },
 
     blog: {
