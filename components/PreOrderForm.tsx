@@ -11,7 +11,7 @@ interface PreOrderStrings {
   submit:  string
   submitting: string
   success: {
-    title: string; line1: string; line2: string; line3: string
+    title: string; line1: string; line2: string
     contact: string; email: string; btnBook: string; btnHome: string
   }
   error:   string
@@ -37,8 +37,7 @@ export default function PreOrderForm({ d }: { d: PreOrderStrings }) {
         <div className="text-5xl mb-4">🎉</div>
         <h3 className="font-nunito font-black text-blue-deep text-2xl mb-4">{d.success.title}</h3>
         <p className="text-dark/70 mb-1">{d.success.line1}</p>
-        <p className="text-dark/70 mb-1">{d.success.line2}</p>
-        <p className="text-dark/70 mb-5">{d.success.line3}</p>
+        <p className="text-dark/70 mb-5">{d.success.line2}</p>
         <p className="text-dark/60 text-sm mb-6">
           {d.success.contact}{' '}
           <a href={`mailto:${d.success.email}`} className="text-blue-deep font-bold hover:underline">

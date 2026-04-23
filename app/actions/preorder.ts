@@ -4,6 +4,10 @@ export interface PreOrderState {
   status: 'idle' | 'success' | 'error'
 }
 
+function esc(s: string) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+}
+
 export async function sendPreOrder(_prev: PreOrderState, formData: FormData): Promise<PreOrderState> {
   const name   = formData.get('name')   as string
   const email  = formData.get('email')  as string
@@ -39,6 +43,23 @@ export async function sendPreOrder(_prev: PreOrderState, formData: FormData): Pr
         <p><strong>Telefon:</strong> ${phone || '—'}</p>
         <p><strong>Asutus/organisatsioon:</strong> ${org || '—'}</p>
         <p><strong>Tellimuste arv:</strong> ${copies}</p>
+      `,
+    })
+
+    await resend.emails.send({
+      from:    'Sofia Salina <onboarding@resend.dev>',
+      to:      email,
+      subject: 'Eeltellimus kinnitatud / Pre-order confirmed – Sofia Salina',
+      html: `
+        <p>Tere ${esc(name)},</p>
+        <p>Sinu eeltellimuse soov on meieni jõudnud. Oled tellinud <strong>${esc(copies)}</strong> eksemplari.</p>
+        <p>Võtame sinuga peagi ühendust e-posti teel maksejuhiste ja tarnekuupäevaga.</p>
+        <p>Küsimuste korral kirjuta: <a href="mailto:leila@eybaglobal.com">leila@eybaglobal.com</a></p>
+        <hr style="margin:24px 0">
+        <p>Hi ${esc(name)},</p>
+        <p>Your pre-order request has reached us. You have ordered <strong>${esc(copies)}</strong> copy/copies.</p>
+        <p>We will be in touch shortly with payment details and delivery information.</p>
+        <p>For questions, write to: <a href="mailto:leila@eybaglobal.com">leila@eybaglobal.com</a></p>
       `,
     })
 

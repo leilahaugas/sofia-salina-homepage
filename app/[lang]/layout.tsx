@@ -33,7 +33,7 @@ export default async function LangLayout({ children, params }: Props) {
 
   return (
     <html lang={lang}>
-      <body>
+      <body suppressHydrationWarning>
         <Nav d={d} lang={lang} />
         <main>{children}</main>
         <Footer d={d} lang={lang} />
